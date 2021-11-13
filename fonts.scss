@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+$fonts-directory: 'assets/fonts/';
+
+// -----------------------------------------------------------------------------
+@font-face {
+  font-family: 'San Francisco Pro Display';
+  src: url($fonts-directory + 'SFProDisplay-Light.eot');
+  src: url($fonts-directory + 'SFProDisplay-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url($fonts-directory + 'SFProDisplay-Light.woff') format('woff'),
+    url($fonts-directory + 'SFProDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// -----------------------------------------------------------------------------
+@font-face {
+  font-family: 'San Francisco Pro Display';
+  src: url($fonts-directory + 'SFProDisplay-Regular.eot');
+  src: url($fonts-directory + 'SFProDisplay-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url($fonts-directory + 'SFProDisplay-Regular.woff') format('woff'),
+    url($fonts-directory + 'SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// -----------------------------------------------------------------------------
+@font-face {
+  font-family: 'San Francisco Pro Display';
+  src: url($fonts-directory + 'SFProDisplay-Semibold.eot');
+  src: url($fonts-directory + 'SFProDisplay-Semibold.eot?#iefix')
+      format('embedded-opentype'),
+    url($fonts-directory + 'SFProDisplay-Semibold.woff') format('woff'),
+    url($fonts-directory + 'SFProDisplay-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

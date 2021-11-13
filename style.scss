@@ -1,0 +1,268 @@
+body {
+  margin-bottom: 100rem;
+}
+
+// -----------------------------------------------------------------------------
+@import './node_modules/cssremedy/css/remedy.css';
+@import './fonts.scss';
+
+// -----------------------------------------------------------------------------
+$screen-max-width: 1164px;
+
+@mixin screen-horizontal-padding() {
+  $pad-width: calc((100vw - $screen-max-width) / 2);
+
+  padding: {
+    left: $pad-width;
+    right: $pad-width;
+  }
+}
+// -----------------------------------------------------------------------------
+span[data-icon-name] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span[data-icon-name='user'] {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1ch;
+  background-size: contain;
+  background: url('./assets/icon-user.svg') no-repeat center center;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// 0-9 lightness
+$white-9: #ffffff;
+$grey-7: #939ca6;
+
+$black-0: #000000;
+$black-2: #323232;
+
+$cyan-4: #4a607a;
+$blue-2: #0d1c41;
+
+$brown-7: #a89060;
+$brown-8: #ddd0a4;
+
+// -----------------------------------------------------------------------------
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'San Francisco Pro Display', sans-serif;
+  font-size: 1.6em;
+
+  background-color: $white-9;
+  color: $black-0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+
+  color: $blue-2;
+}
+
+button {
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  padding: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  text-transform: uppercase;
+
+  background-color: $white-9;
+
+  border: 1px solid $cyan-4;
+  border-radius: 0.6rem;
+
+  &:hover {
+    box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  }
+}
+
+ul {
+  list-style: none;
+}
+li::before {
+  content: '\200B';
+  position: absolute;
+}
+
+// -----------------------------------------------------------------------------
+#header-nav,
+section,
+#footer-upper,
+#footer-lower {
+  @include screen-horizontal-padding();
+}
+
+// -----------------------------------------------------------------------------
+#header-nav {
+  height: 8rem;
+
+  margin-bottom: 3rem;
+  padding: {
+    top: 1rem;
+    bottom: 1rem;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0px 4px 15px rgba(49, 60, 72, 0.05);
+
+  ul {
+    display: flex;
+    li {
+      font-size: 1.8rem;
+
+      margin-right: 6rem;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.is-cityname {
+        font-weight: 600;
+      }
+
+      &.has-nesting {
+        &::after {
+          display: inline-block;
+          content: '❯';
+
+          margin-left: 1ch;
+          transform: translateY(10%) rotate(90deg);
+        }
+      }
+    }
+  }
+}
+
+#logo {
+  margin-right: 8rem;
+
+  width: 6rem;
+  height: 6rem;
+}
+
+#phone-numbers {
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+// -----------------------------------------------------------------------------
+
+#header-hero {
+  display: flex;
+  flex-direction: column;
+
+  width: $screen-max-width;
+  height: 50rem;
+
+  margin: 0 auto 1rem;
+  padding: 12rem calc($screen-max-width * 0.6) 6rem 10rem;
+
+  background: url('./assets/hero.svg') no-repeat right center;
+
+  box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15),
+    -2px -2px 5px rgba(20, 29, 61, 0.15);
+  border-radius: 3rem;
+
+  h1 {
+    margin: 0;
+    font-size: 3.6rem;
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  p {
+    margin-bottom: 2.4rem;
+
+    font-size: 1.4rem;
+    color: $grey-7;
+  }
+
+  button {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: {
+      left: 10rem;
+      right: 10rem;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+#about {
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    // width: 97rem;
+    margin: 0 auto;
+  }
+
+  li {
+    width: 16.5rem;
+    position: relative;
+  }
+
+  $border-radius-length: 2rem;
+
+  .behind {
+    margin: 0;
+    margin-bottom: -$border-radius-length;
+
+    background-color: $brown-8;
+    color: $white-9;
+
+    text-align: center;
+
+    padding: 0.4rem;
+    padding-bottom: calc(0.4rem + $border-radius-length);
+
+    border-radius: $border-radius-length;
+    border-bottom: {
+      left-radius: 0;
+      right-radius: 0;
+    }
+  }
+  .card {
+    height: 19rem;
+
+    background-color: $white-9;
+
+    font-size: 1.4rem;
+
+    padding: 3rem 1rem 1.5rem;
+    text-align: center;
+
+    border-radius: 2rem;
+    box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}

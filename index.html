@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.scss" />
+  </head>
+  <body>
+    <header>
+      <nav id="header-nav">
+        <div id="logo">
+          <img src="assets/logo.png" alt="Logo" usemap="logo-map" />
+          <map name="logo-map">
+            <area shape="default" href="#" alt="Logo" />
+          </map>
+        </div>
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О нас</a></li>
+          <li class="has-nesting">
+            <a href="#">Помощь</a>
+          </li>
+          <li class="has-nesting is-cityname">
+            <a href="#">Санкт-Петербург</a>
+          </li>
+        </ul>
+        <a id="phone-numbers" href="tel:+74959671301">+7 495 967 13 01</a>
+        <a href="#">Личный кабинет <span data-icon-name="user"></span></a>
+      </nav>
+      <div id="header-hero">
+        <h1>
+          Страховая программе<br />
+          <strong>ЗАЩИТА +</strong>
+        </h1>
+        <p>
+          Одна из самых удобных и выгодных страховых программ предоставляемых
+          грожанам России и иностранным гражданам. 
+        </p>
+        <button>купить</button>
+      </div>
+    </header>
+    <section id="about">
+      <h1>О страховании</h1>
+      <ul>
+        <li>
+          <p class="behind">без ограничений</p>
+          <div class="card">
+            <img src="./assets/24-hours.svg" alt="24 hours" />
+            <p>обращения к доктору 24/7</p>
+          </div>
+        </li>
+        <li>
+          <p class="behind">без ограничений</p>
+          <div class="card">
+            <img src="./assets/calendar.svg" alt="Calendar" />
+            <p>обращения к врачам-специалистам</p>
+          </div>
+        </li>
+        <li>
+          <p class="behind">24/7</p>
+          <div class="card">
+            <img src="./assets/insurance.svg" alt="Insurance" />
+            <p>защита от несчастного случая + медицинский онлайн-сервис</p>
+          </div>
+        </li>
+        <li>
+          <p class="behind">до 2-х раз год</p>
+          <div class="card">
+            <img src="./assets/lab.svg" alt="Microscope" />
+            <p>лабораторные исследования</p>
+          </div>
+        </li>
+        <li>
+          <p class="behind">до 10 мин</p>
+          <div class="card">
+            <img src="./assets/butterfly.svg" alt="Butterfly" />
+            <p>упрощенная система страхования</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="features"></section>
+    <section id="prices"></section>
+    <section id="faq"></section>
+    <section id="what-if"></section>
+    <section id="full-pdf"></section>
+    <section id="details-form"></section>
+    <footer>
+      <header id="footer-upper"></header>
+      <footer id="footer-lower"></footer>
+    </footer>
+  </body>
+</html>
