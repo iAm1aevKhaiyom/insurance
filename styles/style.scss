@@ -1,0 +1,471 @@
+// -----------------------------------------------------------------------------
+@import '/node_modules/cssremedy/css/remedy.css';
+@import './fonts.scss';
+@import './preset.scss';
+
+// -----------------------------------------------------------------------------
+@mixin h-padding($value) {
+  padding: {
+    left: $value;
+    right: $value;
+  }
+}
+
+@mixin v-padding($value) {
+  padding: {
+    top: $value;
+    bottom: $value;
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+$screen-max-width: 1164px;
+$col-with-gap-width: 10rem;
+
+// -----------------------------------------------------------------------------
+// 0-9 lightness
+$white-9: #ffffff;
+$grey-7: #939ca6;
+
+$black-0: #000000;
+$black-2: #323232;
+
+$cyan-4: #4a607a;
+$blue-2: #0d1c41;
+
+$brown-7: #a89060;
+$brown-8: #ddd0a4;
+
+// -----------------------------------------------------------------------------
+body {
+  font-size: 1.4em;
+  font-family: 'San Francisco Pro Display', sans-serif;
+
+  color: $black-0;
+  background-color: $white-9;
+
+  margin-bottom: 100rem;
+}
+
+// -----------------------------------------------------------------------------
+h1 {
+  font-weight: 500;
+  font-size: 4.8rem;
+
+  line-height: 1.2;
+  text-align: center;
+
+  margin-bottom: 5rem;
+
+  #header-hero & {
+    color: $blue-2;
+    margin-bottom: 2.4rem;
+
+    text-align: left;
+    font-weight: 400;
+    font-size: 3.6rem;
+  }
+
+  #section-details-form & {
+    margin-bottom: 1rem;
+  }
+}
+
+// -----------------------------------------------------------------------------
+strong {
+  font-weight: 500;
+}
+
+// -----------------------------------------------------------------------------
+button {
+  @include v-padding(2rem);
+
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $white-9;
+  color: $black-0;
+
+  border: 1px solid $cyan-4;
+  border-radius: 0.6rem;
+
+  &:hover {
+    box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  }
+}
+
+// -----------------------------------------------------------------------------
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background: no-repeat center / contain;
+
+  &.is-user {
+    background-image: url('/assets/svg/icon-user.svg');
+
+    width: 3rem;
+    height: 3rem;
+
+    margin-left: 1ch;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &.is-star {
+    background-image: url('/assets/svg/icon-star.svg');
+
+    width: 7rem;
+    height: 7rem;
+
+    margin-right: 1ch;
+  }
+}
+
+// -----------------------------------------------------------------------------
+#header-nav,
+#section-details-form,
+#section-faq,
+#footer-upper {
+  font-size: 1.8rem;
+}
+
+#section-features {
+  font-size: 2.4rem;
+}
+
+// -----------------------------------------------------------------------------
+#header-hero,
+section {
+  width: $screen-max-width;
+  margin: 0 auto;
+}
+
+#header-nav,
+#footer-upper,
+#footer-lower {
+  padding: 0 calc((100vw - $screen-max-width) / 2);
+}
+
+#header-hero {
+  margin-top: 3rem;
+}
+section {
+  margin-top: 10.8rem;
+}
+#footer-upper {
+  margin-top: 13.8rem;
+}
+
+// -----------------------------------------------------------------------------
+#header-nav {
+  @include v-padding(1rem);
+  height: 8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0px 4px 15px rgba(49, 60, 72, 0.05);
+
+  & > ul {
+    display: flex;
+  }
+
+  li {
+    position: relative;
+    margin-right: 6rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-cityname {
+      font-weight: 500;
+    }
+
+    &.has-nesting::after {
+      display: inline-block;
+      content: '❯';
+
+      cursor: pointer;
+
+      position: absolute;
+      right: -1.5ch;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+#logo {
+  width: 6rem;
+  height: 6rem;
+
+  margin-right: 4rem;
+}
+
+#phone-numbers {
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+#my-cabinet {
+  font-weight: 500;
+}
+
+// -----------------------------------------------------------------------------
+#header-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  height: 50rem;
+  border-radius: 3rem;
+
+  padding: {
+    top: 12.4rem;
+    bottom: 6.4rem;
+
+    left: calc($col-with-gap-width);
+    right: calc(7 * $col-with-gap-width);
+  }
+
+  background: url('/assets/svg/hero.svg') no-repeat right center;
+
+  box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15),
+    -2px -2px 5px rgba(20, 29, 61, 0.15);
+
+  & > p {
+    color: $grey-7;
+  }
+
+  & > button {
+    @include h-padding(10rem);
+    margin-top: auto;
+  }
+}
+
+// -----------------------------------------------------------------------------
+#section-about {
+  @include h-padding($col-with-gap-width);
+
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    width: 16.5rem;
+    position: relative;
+  }
+
+  img {
+    margin: 0 auto 2rem;
+    height: 7rem;
+  }
+
+  $border-radius-length: 2rem;
+
+  .behind {
+    $padding-length: 0.4rem;
+
+    padding: $padding-length;
+
+    border-top-left-radius: $border-radius-length;
+    border-top-right-radius: $border-radius-length;
+
+    margin-bottom: -$border-radius-length;
+    padding-bottom: calc($padding-length + $border-radius-length);
+
+    color: $white-9;
+    background-color: $brown-8;
+
+    text-align: center;
+  }
+
+  .card {
+    height: 19rem;
+    padding: 3rem 1rem 1.5rem;
+
+    text-align: center;
+
+    background-color: $white-9;
+
+    border-radius: $border-radius-length;
+    box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  }
+}
+// -----------------------------------------------------------------------------
+// #section-features {
+// }
+
+.feature {
+  height: 50rem;
+  background: no-repeat left center / contain;
+
+  h2 {
+    font-size: 6.4rem;
+    margin-bottom: 1rem;
+  }
+
+  &.is-left {
+    background-position: right center;
+
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  &.is-doctors {
+    background-image: url(/assets/svg/doctors.svg);
+    background-position-x: 1rem;
+
+    padding: {
+      top: 10rem;
+      left: calc(6 * $col-with-gap-width);
+    }
+  }
+
+  &.is-app {
+    background-image: url(/assets/svg/app.svg);
+    background-position-x: calc(100% - $col-with-gap-width);
+
+    padding: {
+      top: 20rem;
+      left: $col-with-gap-width;
+    }
+  }
+
+  &.is-runner {
+    background-image: url(/assets/svg/runner.svg);
+
+    padding: {
+      top: 18rem;
+      left: calc(7 * $col-with-gap-width);
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// #section-offers
+//   h1
+//   ul
+//     li
+//       .behind
+//         h2
+//         p
+//       .card
+//         ul
+//         .price
+//           span
+//         button
+//       button
+
+#section-offers {
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+
+    & > li {
+      width: 36.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  button {
+    display: block;
+    @include h-padding(5rem);
+    margin: 0 auto;
+  }
+
+  .behind,
+  .card {
+    box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  }
+
+  $border-radius-length: 1rem;
+
+  .card {
+    padding: 5rem;
+    padding-left: 7rem;
+
+    border-radius: $border-radius-length;
+    background-color: $white-9;
+
+    & > ul {
+      &.is-empty {
+        height: 100rem;
+      }
+
+      list-style: '—  ';
+      ul {
+        list-style: disc;
+        padding: {
+          top: 2rem;
+          left: 4rem;
+        }
+
+        br {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    li {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .behind {
+    color: $white-9;
+    background-color: $brown-7;
+    text-align: center;
+
+    height: calc(12.6rem + $border-radius-length);
+    margin-bottom: -$border-radius-length;
+
+    border-top-left-radius: $border-radius-length;
+    border-top-right-radius: $border-radius-length;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.8rem;
+  }
+
+  .headers {
+    h2 {
+      text-transform: none;
+    }
+    & > .behind {
+      background-color: $cyan-4;
+    }
+
+    button {
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+}

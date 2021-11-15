@@ -2,20 +2,22 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="style.scss" />
+    <link rel="stylesheet" href="./styles/style.scss" />
   </head>
   <body>
+    <!-- ------------------------------------------------------------------- -->
     <header>
       <nav id="header-nav">
         <div id="logo">
-          <img src="assets/logo.png" alt="Logo" usemap="logo-map" />
+          <img src="./assets/svg/logo.svg" alt="Logo" usemap="logo-map" />
           <map name="logo-map">
-            <area shape="default" href="#" alt="Logo" />
+            <area shape="default" href="https://google.com" alt="Logo" />
           </map>
         </div>
+
         <ul>
           <li><a href="#">Главная</a></li>
           <li><a href="#">О нас</a></li>
@@ -26,67 +28,204 @@
             <a href="#">Санкт-Петербург</a>
           </li>
         </ul>
+
         <a id="phone-numbers" href="tel:+74959671301">+7 495 967 13 01</a>
-        <a href="#">Личный кабинет <span data-icon-name="user"></span></a>
+
+        <div id="my-cabinet">
+          <a href="#">Личный кабинет </a>
+          <div class="icon is-user"></div>
+        </div>
       </nav>
+
       <div id="header-hero">
         <h1>
           Страховая программе<br />
           <strong>ЗАЩИТА +</strong>
         </h1>
+
         <p>
           Одна из самых удобных и выгодных страховых программ предоставляемых
           грожанам России и иностранным гражданам. 
         </p>
+
         <button>купить</button>
       </div>
     </header>
-    <section id="about">
+
+    <!-- ------------------------------------------------------------------- -->
+    <section id="section-about">
       <h1>О страховании</h1>
+
       <ul>
         <li>
-          <p class="behind">без ограничений</p>
+          <div class="behind">без ограничений</div>
           <div class="card">
-            <img src="./assets/24-hours.svg" alt="24 hours" />
+            <img src="./assets/svg/24-hours.svg" alt="24 hours" />
             <p>обращения к доктору 24/7</p>
           </div>
         </li>
         <li>
-          <p class="behind">без ограничений</p>
+          <div class="behind">без ограничений</div>
           <div class="card">
-            <img src="./assets/calendar.svg" alt="Calendar" />
+            <img src="./assets/svg/calendar.svg" alt="Calendar" />
             <p>обращения к врачам-специалистам</p>
           </div>
         </li>
         <li>
-          <p class="behind">24/7</p>
+          <div class="behind">24/7</div>
           <div class="card">
-            <img src="./assets/insurance.svg" alt="Insurance" />
+            <img src="./assets/svg/insurance.svg" alt="Insurance" />
             <p>защита от несчастного случая + медицинский онлайн-сервис</p>
           </div>
         </li>
         <li>
-          <p class="behind">до 2-х раз год</p>
+          <div class="behind">до 2-х раз год</div>
           <div class="card">
-            <img src="./assets/lab.svg" alt="Microscope" />
+            <img src="./assets/svg/lab.svg" alt="Microscope" />
             <p>лабораторные исследования</p>
           </div>
         </li>
         <li>
-          <p class="behind">до 10 мин</p>
+          <div class="behind">до 10 мин</div>
           <div class="card">
-            <img src="./assets/butterfly.svg" alt="Butterfly" />
+            <img src="./assets/svg/butterfly.svg" alt="Butterfly" />
             <p>упрощенная система страхования</p>
           </div>
         </li>
       </ul>
     </section>
-    <section id="features"></section>
-    <section id="prices"></section>
-    <section id="faq"></section>
-    <section id="what-if"></section>
-    <section id="full-pdf"></section>
-    <section id="details-form"></section>
+
+    <!-- ------------------------------------------------------------------- -->
+    <section id="section-features">
+      <h1>Условия которые мы предоставим Вам</h1>
+
+      <div class="feature is-doctors">
+        <h2>20+</h2>
+        <p>
+          Высококвалифицированных <br />
+          врачей к которым вы можете <br />
+          обращаться <strong>24/7</strong>
+        </p>
+      </div>
+
+      <div class="feature is-left is-app">
+        <h2>
+          <div class="icon is-star"></div>
+          BestDoctor
+        </h2>
+        <p>
+          Доступ в один из лучших <br />
+          медицинских сервисов в России
+        </p>
+      </div>
+
+      <div class="feature is-runner">
+        <h2>600 000₽</h2>
+        <p>
+          Сумма страховой защиты <br />
+          от нещастного случая
+        </p>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------- -->
+    <section id="section-offers">
+      <h1>У нас есть 2 пакета услуг</h1>
+      <ul>
+        <li class="headers">
+          <div class="behind">
+            <h2>Что мы предлогаем:</h2>
+          </div>
+
+          <div class="card">
+            <ul>
+              <li>
+                круглосуточный колл-центр по консультациям терапевта или
+                педиатра
+              </li>
+              <li>
+                консультация терапевта или педиатра по телефону или по
+                видеосвязи
+              </li>
+              <li>
+                предварительная запись к выбранному узкому специалисту по
+                телефону или через личный кабинет пациента
+              </li>
+              <li>консультация узкого специалиста по видеосвязи</li>
+              <li>выбор лаборатории, запись на прием в лабораторию</li>
+              <li>
+                комплексный отчет о состоянии здоровья пациента от врача после
+                получения результатов анализов от пациента
+              </li>
+              <li>никаких чат-ботов</li>
+              <li>на связи 24/7 только высококвалифицированные врачи</li>
+              <li>удобное приложение с простым интерфейсом BestDoctor</li>
+              <li>общие (клинические) анализы</li>
+              <li>
+                ультразвуковые исследования рентгенологические исследования
+                <ul>
+                  <li>УЗИ органов брюшной полости</li>
+                  <li>почек</li>
+                  <li>мочевого пузыря</li>
+                  <li>
+                    УЗДГ сосудов (артерии и вены)
+                    <br />
+                    <strong>
+                      одно исследование из списка в течение срока действия
+                      программы
+                    </strong>
+                  </li>
+                </ul>
+              </li>
+              <li>рентгенологические исследования</li>
+            </ul>
+          </div>
+
+          <button>
+            скачать полуную версию
+            <div class="icon is-download"></div>
+          </button>
+        </li>
+
+        <li>
+          <div class="behind">
+            <h2>Защита +</h2>
+            <p>виртуальная клиника</p>
+          </div>
+
+          <div class="card">
+            <ul class="is-empty"></ul>
+            <div class="price">10 500 руб.</div>
+            <button>купить</button>
+          </div>
+        </li>
+
+        <li>
+          <div class="behind">
+            <h2>Защита +</h2>
+            <p>
+              виртуальная клиника, <br />
+              лабораторные исследования
+            </p>
+          </div>
+
+          <div class="card">
+            <ul class="is-empty"></ul>
+            <div class="price is-special">
+              <span>Супер цена</span>
+              <span>7 750 руб</span>
+            </div>
+            <button>купить</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ------------------------------------------------------------------- -->
+    <section id="section-faq"></section>
+    <section id="section-what-if"></section>
+    <section id="section-full-pdf"></section>
+    <section id="section-details-form"></section>
     <footer>
       <header id="footer-upper"></header>
       <footer id="footer-lower"></footer>

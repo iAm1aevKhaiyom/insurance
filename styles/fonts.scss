@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-$fonts-directory: 'assets/fonts/';
+$fonts-directory: '../assets/fonts/';
 
 // -----------------------------------------------------------------------------
 @font-face {
@@ -28,11 +28,11 @@ $fonts-directory: 'assets/fonts/';
 // -----------------------------------------------------------------------------
 @font-face {
   font-family: 'San Francisco Pro Display';
-  src: url($fonts-directory + 'SFProDisplay-Semibold.eot');
-  src: url($fonts-directory + 'SFProDisplay-Semibold.eot?#iefix')
+  src: url($fonts-directory + 'SFProDisplay-Medium.eot');
+  src: url($fonts-directory + 'SFProDisplay-Medium.eot?#iefix')
       format('embedded-opentype'),
-    url($fonts-directory + 'SFProDisplay-Semibold.woff') format('woff'),
-    url($fonts-directory + 'SFProDisplay-Semibold.ttf') format('truetype');
-  font-weight: 600;
+    url($fonts-directory + 'SFProDisplay-Medium.woff') format('woff'),
+    url($fonts-directory + 'SFProDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
 }
